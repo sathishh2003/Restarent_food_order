@@ -10,13 +10,7 @@
 :root{
     --FONTCOLOR:orange;
 }
-.home{
-    min-height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("./1401021.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 nav{
     display: flex;
     justify-content:space-between;
@@ -152,4 +146,135 @@ nav ul li a:hover{
     100% {
         background-color: var(--FONTCOLOR); /* End with specified background color */
     }
+}
+
+/*------------------contact------------*/
+
+.pannel{
+    height:450px;
+    width:500px;
+    padding: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 20px;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.box{
+    height:200px;
+    width:200px;
+    border: 2px solid var(--FONTCOLOR);
+    background-color: rgba(12,11,9,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:var(--FONTCOLOR);
+    padding-left:1rem;
+    padding-right:1rem;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+.box:hover{
+    transform: scale(1.2);
+    background-color: black;
+}
+.box i{
+    font-size: 35px;
+    padding:10px;
+    color:white;
+}
+.box-1 h1{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.box-1 h3{
+    font-size: 14px;
+    padding: 5px;
+}
+.box-2 i{
+    font-size: 40px;
+}
+.box h3{
+    font-size: 15px;
+    padding-top: 10px;
+}
+.contact{
+    background-color: rgba(12,11,9,0.6);
+    padding:10px;
+    border:2px soid var(--FONTCOLOR);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height:420px;
+}
+.fore-group{
+    padding:10px;
+}
+input{
+    height: 35px;
+    width: 300px;
+    padding: 5px;
+    padding:5px;
+    font-size: 14px;
+    background-color: rgba(255, 166, 0, 0.779);
+    border:none;
+    outline: none;
+    color:white;
+}
+textarea{
+    background-color: rgba(255, 166, 0, 0.779);
+    border: none;
+    resize: none;
+    color:white;
+    padding:10px;
+    outline: none;
+}
+.pannel h3{
+    color:var(--FONTCOLOR);
+    text-transform: uppercase;
+    padding:3px;
+
+}
+.btn-send{
+    padding:8px 40px;
+    background-color: transparent;
+    border: none;
+    color:var(--FONTCOLOR);
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 16px;
+    border:2px solid var(--FONTCOLOR);
+}
+.btn-send:hover{
+    background-color: var(--FONTCOLOR);
+    color:black;
+}
+.footer{
+    position: absolute;
+    height:40px;
+    bottom:0;
+    width:100%;
+    background-color: rgba(12,11,9,0.6);
+    border:2px solid var(--FONTCOLOR);
+    text-align: center;
+    color:white;
+    font-size: 14px;
+}
+.footer h4{
+    margin-top: 8px;
+}
+.footer i,.footer .ncolor{
+    color:var(--FONTCOLOR);
 }
