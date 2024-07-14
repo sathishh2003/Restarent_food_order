@@ -6,9 +6,17 @@
     padding:0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    scrollbar-width: none;
 }
 :root{
     --FONTCOLOR:orange;
+}
+.home{
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("./Contact_coffee-shop-indoors-cafe-restaurant.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 nav{
@@ -44,9 +52,35 @@ nav ul li a{
     font-size: 15px;
     text-transform: uppercase;
     color:white;
+    font-weight: 500;
 }
-nav ul li a:hover{
-    color:var(--FONTCOLOR);
+nav ul li {
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    background-color: var(--FONTCOLOR);
+    height: 3px;
+    left: 0px;
+    width:100%;
+    position: absolute; 
+    bottom:12px;
+    box-shadow: 2px 2px 8px var(--FONTCOLOR);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition:transform 0.4s;
+}
+nav ul li a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+.banner h2 span::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 2px var(--FONTCOLOR);
 }
 .banner{
     display: flex;
@@ -126,14 +160,15 @@ nav ul li a:hover{
     margin-bottom: 8px;
 }
 .special h1{
-    background-color: var(--FONTCOLOR);
+    background:linear-gradient(to right,var(--FONTCOLOR),transparent);
     padding: 10px;
     font-size: 15px;
     text-transform: uppercase;
     word-spacing: 5px;
     position: absolute;
-    top: 390px;
+    top: 395px;
     animation: todaySpecial;
+    cursor:default;
     animation-duration: 6s;
 }
 @keyframes todaySpecial {
@@ -144,7 +179,7 @@ nav ul li a:hover{
         background-color: rgba(0, 0, 0, 0); /* Stay transparent for first half of animation */
     }
     100% {
-        background-color: var(--FONTCOLOR); /* End with specified background color */
+        background:linear-gradient(to right,var(--FONTCOLOR),transparent); /* End with specified background color */
     }
 }
 
@@ -218,6 +253,7 @@ nav ul li a:hover{
     justify-content: center;
     align-items:center;
     height:420px;
+    border:2px solid var(--FONTCOLOR);
 }
 .fore-group{
     padding:10px;
@@ -225,7 +261,7 @@ nav ul li a:hover{
 input{
     height: 35px;
     width: 300px;
-    padding: 5px;
+    padding: 10px;
     padding:5px;
     font-size: 14px;
     background-color: rgba(255, 166, 0, 0.779);
@@ -267,7 +303,7 @@ textarea{
     bottom:0;
     width:100%;
     background-color: rgba(12,11,9,0.6);
-    border:2px solid var(--FONTCOLOR);
+    border-top:2px solid var(--FONTCOLOR);
     text-align: center;
     color:white;
     font-size: 14px;

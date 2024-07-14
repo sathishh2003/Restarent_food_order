@@ -113,6 +113,7 @@ header nav ul li a:hover{
     padding:20px;
     z-index:100;
 }     
+
 .cart-active{
     right:0;
     transition: 0.4s ease;
@@ -210,6 +211,7 @@ header nav ul li a:hover{
     color: black;
     background: var(--FONTCOLOR);
 }
+
 #cart-close{
     position: absolute;
     top:20px;
@@ -277,9 +279,35 @@ header nav ul li a:hover{
     transition: 0.3s ease-in;
     cursor: pointer;
 }
+
+.container .food-box .add-cart:active{
+    color:var(--FONTCOLOR);
+    background-color: transparent;
+}
 .container .food-box .add-cart:hover{
     color:black;
     font-weight: 500;
     background-color: var(--FONTCOLOR);
 }
 
+nav ul li {
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    background-color: var(--FONTCOLOR);
+    height: 3px;
+    left: 8px;
+    width:80%;
+    position: absolute; 
+    bottom:8px;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition:transform 0.4s;
+}
+nav ul li a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
