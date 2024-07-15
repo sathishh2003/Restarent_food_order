@@ -209,9 +209,14 @@ header nav ul li a:hover{
 }
 .btn-buy:hover{
     color: black;
+    font-weight: 600;
     background: var(--FONTCOLOR);
 }
-
+.btn-buy:active{
+    background: transparent;
+    color:transparent;
+    border:none;
+}
 #cart-close{
     position: absolute;
     top:20px;
@@ -296,18 +301,136 @@ nav ul li {
 nav ul li a::after{
     content: "";
     background-color: var(--FONTCOLOR);
-    height: 3px;
-    left: 8px;
-    width:80%;
+    left: 0px;
+    width:100%;
     position: absolute; 
-    bottom:8px;
-    box-shadow: 2px 2px 8px black;
+    height:3px;
+    bottom:0px;
+   /*  box-shadow: 2px 2px 8px black; */
     border-radius: 5px;
     transform-origin: right;
     transform: scale(0);
-    transition:transform 0.4s;
+    transition:transform .5s ;
 }
 nav ul li a:hover::after{
     transform: scale(1);
     transform-origin: left;
+}
+#check{
+    display: none;
+}
+
+@media (max-width:770px){
+    #btn,#cancel{
+        color:white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        float: left;
+        display: none;
+    }
+    header{
+        height:100px;
+        position: sticky;
+        h1{
+            margin-top:-15px;
+        }
+
+    }
+    .hamburger{
+        justify-content: left;
+        position:sticky;
+        top:42px;
+        margin-left: 20px;
+
+    }
+    #check{
+            display: none;
+    }
+    #globalMenu{
+        display: none;
+    }
+    label #btn{
+        display: block;
+        z-index: 11;
+    }
+    label #close{
+        z-index: 999;
+    }
+    nav ul{
+        position:fixed;
+        width: 50%;
+        height: 100vh;
+        background: rgba(12,11,9,0.8);
+        top:98px;
+        left: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        display: none;
+        flex-direction: column;
+    }
+    nav{
+        justify-content: right;
+        
+    }
+    nav ul li{
+        margin:5px 0;
+        line-height: 30px;
+    }   
+    .container .food-box{
+        width: 150px;
+    }
+    .container .food-box img{
+        width:100px;
+        height:100px;
+    }
+    .add-cart{
+        width:120px;
+    }
+    .cart{
+        width:40%;
+    }
+    nav ul li a::after{
+        bottom:10px;
+
+    }
+    .btn-cart{
+        width:80%;
+        margin:50px;
+        margin-bottom: 0px;
+        background-color: var(--FONTCOLOR);
+        color:black;
+    }
+    .btn-cart:hover{
+        background-color: transparent;
+        color:var(--FONTCOLOR);
+    }
+    .btn-cart:active{
+        background-color:var(--FONTCOLOR);
+        color:black;
+    }
+    .cart-count{
+
+        margin-top: -23px;
+        margin-left: -80px;
+    }
+    .detail-box{
+      /*   margin-left: 20px; */
+        font-size: 14px;
+        min-width:0;
+    }
+    .cart-box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .btn-buy{
+        margin-top: 20px;
+        background-color:var(--FONTCOLOR);
+        color:black;
+        font-weight: 600;
+    }
+    .btn-buy:hover{
+        background-color: transparent;
+        color:var(--FONTCOLOR);
+    }
 }

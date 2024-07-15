@@ -6,13 +6,27 @@
     <title>Veg Foods</title>
     <link rel="stylesheet" href="./public/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    
-    <section class="food">
+<body> 
+
+    <section class="food">              
         <header>
+            
+                        <!-- ------Hamburger--for --mobile view------ -->
+
+                        <nav class="hamburger">
+                            <input type="checkbox" id="check" />
+                            <label for="check">
+                                <i class="fa fa-bars" id="btn"></i>
+                                <i class="fa fa-times" id="cancel"></i>
+                            </label>
+                        </nav>
+            
+
             <h1>Vegeratian Foods</h1>
-            <nav>
+   
+            <nav id="globalMenu">
                 <ul>
                     <li><a href="/index">Home</a></li>
                     <li><a href="#">Veg</a></li>
@@ -53,7 +67,7 @@
 
                 <div class="food-box">
                 <img src="./public/panner-Masala.jpg">
-                <h2 class="food-title">Panner Butter Masala</h2>
+                <h2 class="food-title">Panner Masala</h2>
                 <h3 class="food-price">Rs.200</h3>
                 <button class="add-cart">
                     Add to cart
