@@ -321,21 +321,21 @@ textarea{
 }
 @media (max-width:770px) {
        #globalMenu{
-        display: none;
         height:78px;
+        display: none;
         
        }
-       .logo{
+    .logo{
         display: flex;
         justify-content: flex-end;
         margin-right:20px;
-       }
+    }
        #btn,#cancel{
         color:white;
         font-size: 1.5rem;
         cursor: pointer;
         float: left;
-       /*  display: none; */
+        display: none;
         position:fixed;
         top:33px;
     }
@@ -360,7 +360,6 @@ textarea{
         display: flex;
         align-items: center;
         flex-direction: column;
-        /* display: none; */
         z-index: 111;
     }
     #globalMenu ul li{
@@ -373,10 +372,6 @@ textarea{
     .container .food-box img{
         width:100px;
         height:100px;
-    }
-    label #close{
-        z-index: 12;
-        display: none;
     }
     #globalMenu ul li a::after{
         bottom:10px;

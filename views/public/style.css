@@ -315,7 +315,7 @@ nav ul li a::after{
     border-radius: 5px;
     transform-origin: right;
     transform: scale(0);
-    transition:transform .4s ;
+    transition:transform .5s ;
 }
 nav ul li a:hover::after{
     transform: scale(1);
