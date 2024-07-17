@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="/public/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .home{
             min-height:100vh;
@@ -16,8 +17,20 @@
     </style>
 </head>
 <body>
+
     <section class="home" id="home">
-        <nav>
+
+      <!-- ------Hamburger--for --mobile view------ -->
+       
+      <nav class="hamburger">
+        <input type="checkbox" id="check" />
+        <label for="check">
+            <i class="fa fa-bars" id="btn"></i>
+            <i class="fa fa-times" id="cancel"></i>
+        </label>
+    </nav>
+
+        <nav id="globalMenu">
             <div class="logo"> 
                 <h1>Dine <span>with us</span></h1>
             </div>
@@ -55,5 +68,28 @@
             </div>
         </div>
     </section>
+    <script>
+        
+    function hamburger(){
+        const globalMenu = document.getElementById('globalMenu');
+        const btn = document.getElementById('btn');
+        const cancel = document.getElementById('cancel');
+        const check = document.getElementById('check');
+
+            btn.addEventListener('click',()=>{
+                btn.style.display = 'none';
+                cancel.style.display = 'block';
+               globalMenu.style.display = 'block';
+            });
+            cancel.addEventListener('click',()=>{
+                 cancel.style.display = 'none';
+                btn.style.display = 'block';
+                globalMenu.style.display = 'none';
+            })
+
+
+    }
+    hamburger();
+    </script>
 </body>
 </html>

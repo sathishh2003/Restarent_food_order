@@ -316,3 +316,69 @@ textarea{
 .footer i,.footer .ncolor{
     color:var(--FONTCOLOR);
 }
+#check{
+    display: none;
+}
+@media (max-width:770px) {
+       #globalMenu{
+        display: none;
+        height:78px;
+        
+       }
+       .logo{
+        display: flex;
+        justify-content: flex-end;
+        margin-right:20px;
+       }
+       #btn,#cancel{
+        color:white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        float: left;
+       /*  display: none; */
+        position:fixed;
+        top:33px;
+    }
+  /*   .hamburger{
+        justify-content: left;
+        position:sticky;
+        top:42px;
+        margin-left: 15px;
+    }  */
+    label #btn{
+        display: block;
+        z-index: 11;
+    }
+      #globalMenu ul{
+        position:fixed;
+        width: 50%;
+        height: 100vh;
+        background: rgba(12,11,9,0.8);
+        top:98px;
+        left: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* display: none; */
+        z-index: 111;
+    }
+    #globalMenu ul li{
+        margin:5px 0;
+        line-height: 30px;
+    }   
+    .container .food-box{
+        width: 150px;
+    }
+    .container .food-box img{
+        width:100px;
+        height:100px;
+    }
+    label #close{
+        z-index: 12;
+        display: none;
+    }
+    #globalMenu ul li a::after{
+        bottom:10px;
+    }
+}
