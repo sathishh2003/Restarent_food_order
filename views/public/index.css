@@ -65,7 +65,7 @@ nav ul li a::after{
     width:100%;
     position: absolute; 
     bottom:12px;
-   /*  box-shadow: 2px 2px 8px var(--FONTCOLOR); */
+    box-shadow: 2px 2px 8px var(--FONTCOLOR);
     border-radius: 5px;
     transform-origin: right;
     transform: scale(0);
@@ -75,12 +75,12 @@ nav ul li a:hover::after{
     transform: scale(1);
     transform-origin: left;
 }
-.banner h2 span::after{
+.banner h2 span::before{
         content: "";
         position: absolute;
         top: 0;
-        left: 20px;
-        border-left: 10px var(--FONTCOLOR);
+        left: 0;
+        border-left: 2px var(--FONTCOLOR);
 }
 .banner{
     display: flex;
@@ -89,7 +89,6 @@ nav ul li a:hover::after{
     align-items: center;
     min-height:80vh;
     margin-top: -50px;
-    position:relative;
 }
 .banner h2{
     color: white;
@@ -113,11 +112,11 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 2rem;
     animation: special;
     animation-duration: 3s;
+    flex-wrap: wrap;
 }
 @keyframes special {
     from{
@@ -161,14 +160,12 @@ nav ul li a:hover::after{
     padding:5px;
     margin-bottom: 8px;
 }
-.special h1{
+#todayspecial{
     background:linear-gradient(to right,var(--FONTCOLOR),transparent);
     padding: 10px;
     font-size: 15px;
     text-transform: uppercase;
     word-spacing: 5px;
-    position: absolute;
-    top: 395px;
     animation: todaySpecial;
     cursor:default;
     animation-duration: 6s;
@@ -316,35 +313,44 @@ textarea{
 .footer i,.footer .ncolor{
     color:var(--FONTCOLOR);
 }
+.hamburger{
+    display: none;
+}
 #check{
     display: none;
 }
 @media (max-width:770px) {
        #globalMenu{
-        height:78px;
         display: none;
+        height:78px;
         
        }
-    .logo{
+       
+       .logo{
         display: flex;
         justify-content: flex-end;
         margin-right:20px;
-    }
+       }
+       .banner{
+        width:80%;
+       }
+       .outer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
        #btn,#cancel{
         color:white;
         font-size: 1.5rem;
         cursor: pointer;
         float: left;
-        display: none;
+       /*  display: none; */
         position:fixed;
         top:33px;
     }
-  /*   .hamburger{
-        justify-content: left;
-        position:sticky;
-        top:42px;
-        margin-left: 15px;
-    }  */
+    .hamburger{
+        display: block;
+    }
     label #btn{
         display: block;
         z-index: 11;
@@ -360,18 +366,27 @@ textarea{
         display: flex;
         align-items: center;
         flex-direction: column;
+        /* display: none; */
         z-index: 111;
     }
     #globalMenu ul li{
         margin:5px 0;
         line-height: 30px;
     }   
-    .container .food-box{
+    .special .special-box{
         width: 150px;
+        height:220px;
     }
-    .container .food-box img{
+    .special .special-box img{
         width:100px;
         height:100px;
+    }
+    label #cancel{
+        z-index: 12;
+        display: none;
+    }
+    .special{
+        row-gap: 10rem;
     }
     #globalMenu ul li a::after{
         bottom:10px;

@@ -324,7 +324,12 @@ nav ul li a:hover::after{
 #check{
     display: none;
 }
+@media(max-width:350px){
+    header h1{
+        font-size: 16px;
+    }
 
+}
 @media (max-width:770px){
     #btn,#cancel{
         color:white;
@@ -362,6 +367,7 @@ nav ul li a:hover::after{
         z-index: 11;
     }
     label #close{
+        display: none;
         z-index: 999;
     }
     nav ul{

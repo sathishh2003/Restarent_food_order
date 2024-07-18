@@ -45,12 +45,15 @@
                 <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="outer">
         <div class="banner">
             <h2>Welcome to <span>dine with us</span></h2>
             <h3>Delivaring delicious food in the city</h3>
+            <h1 id="todayspecial">Today's special</h1>
+        </div>
         </div>
         <div class="special">
-            <h1>Today's special</h1>
+           
             <div class="special-box">
                 <img src="./public/chicken-wings-fried-food-food-cuisine-wallpaper-preview.jpg" >
                 <h2>Chicken Wings</h2>
@@ -79,7 +82,7 @@
             btn.addEventListener('click',()=>{
                 btn.style.display = 'none';
                 cancel.style.display = 'block';
-               globalMenu.style.display = 'block';
+                globalMenu.style.display = 'block';
             });
             cancel.addEventListener('click',()=>{
                  cancel.style.display = 'none';
