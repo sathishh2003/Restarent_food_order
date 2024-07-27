@@ -6,6 +6,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    scrollbar-width: none;
 }
 :root{
     --FONTCOLOR:orange;
@@ -29,7 +30,7 @@ header{
     position:fixed;
     width: 100%;
     top: 0;
-    z-index:2;
+    z-index:1001;
 }
 
 header h1{
@@ -340,6 +341,9 @@ nav ul li a:hover::after{
         position:fixed;
         top:33px;
     }
+    .add-cart{
+        
+    }
     header{
         height:100px;
         position:sticky;
@@ -399,10 +403,10 @@ nav ul li a:hover::after{
         height:100px;
     }
     .add-cart{
-        width:120px;
+        max-width:120px;
     }
     .cart{
-        width:40%;
+        width:50%;
     }
     nav ul li a::after{
         bottom:10px;
@@ -446,5 +450,20 @@ nav ul li a:hover::after{
     .btn-buy:hover{
         background-color: transparent;
         color:var(--FONTCOLOR);
+    }
+}
+@media(max-width:450px){
+    .container{
+        display: grid;
+        grid-template-columns: .5fr .5fr;
+        width: 100%;
+/*         margin-left: 10px;
+        margin-right: 10px; */
+
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
     }
 }
