@@ -1,3 +1,13 @@
+AOS.init();
+
+window.addEventListener("scroll",()=>{
+    if(globalMenu.style.display === "block"){
+        globalMenu.style.display = "none";
+        btn.style.display = "block";
+        cancel.style.display = "none";
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const btnCart = document.querySelector('.btn-cart');
     const cart = document.querySelector('.cart');

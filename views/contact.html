@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./public/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./public/contactUs.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="./public/script.js"></script>
+    
     <section class="home" id="home">
         
       <!-- ------Hamburger--for --mobile view------ -->
@@ -94,6 +97,15 @@
                     globalMenu.style.display = 'none';
                 });
         }
+
+window.addEventListener("scroll",()=>{
+    if(globalMenu.style.display === "block"){
+        globalMenu.style.display = "none";
+        btn.style.display = "block";
+        cancel.style.display = "none";
+    }
+});
+
         hamburger();
 
         const name = document.getElementById('name');

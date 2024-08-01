@@ -1,3 +1,13 @@
+AOS.init();
+
+window.addEventListener("scroll",()=>{
+    if(globalMenu.style.display === "block"){
+        globalMenu.style.display = "none";
+        btn.style.display = "block";
+        cancel.style.display = "none";
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const btnCart = document.querySelector('.btn-cart');
     const cart = document.querySelector('.cart');
@@ -9,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
 
     updateCartUI();
-
+    
     function hamburger(){
         const globalMenu = document.getElementById('globalMenu');
         const btn = document.getElementById('btn');
